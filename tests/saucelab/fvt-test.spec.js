@@ -64,15 +64,15 @@
     it("Enter zip code and check output - 1", function(done) {
       driver.findElement(webdriver.By.id('zip1')).sendKeys('3216');
       driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
-        assert.equal(text, ' Anderson Mill');
+        assert.equal(text, ' Hamilton');
         done();
       });
     });
 
     it("Enter zip code and check output - 2", function(done) {
-      driver.findElement(webdriver.By.id('zip4')).sendKeys('3581');
+      driver.findElement(webdriver.By.id('zip4')).sendKeys('1010');
       driver.findElement(webdriver.By.id('zip4city')).getText().then(function(text) {
-        assert.equal(text, ' Irving');
+        assert.equal(text, ' Auckland');
         done();
       });
     });

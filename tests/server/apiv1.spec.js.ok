@@ -18,10 +18,10 @@
         });
 
     	it('with valid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=78613')
+    		rqst(app).get('/api/v1/getWeather?zip=3216')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
-                    assert.equal(res.body.city, 'Anderson Mill');
+                    assert.equal(res.body.city, 'Hamilton');
                     done();
                 });
     	});
@@ -43,7 +43,7 @@
     	});
 
     	it('with incomplete zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=786')
+    		rqst(app).get('/api/v1/getWeather?zip=321')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
