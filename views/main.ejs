@@ -17,7 +17,7 @@
             <% include includes/mainbody %>
         </div>
         
-        <div id="map" style="width:100%; height:400px"></div>
+        <div id="map" style="width:100%; height:600px"></div>
 
     
     <script>
@@ -29,17 +29,31 @@
 	    <script>
 	      var map;
 	      function initMap() {
-	        map = new google.maps.Map(document.getElementById('map'), {
+	          map = new google.maps.Map(document.getElementById('map'), {
 	          center: {lat: -37.7833, lng: 175.2793},
-	          zoom: 8
+	          zoom: 6
+	          
+	          var Hamilton = {-37.7870, 175.2793};
+	          var Wellington = {-41.2865, 174.7762};
+	          var Christchurch = {-43.5321, 172.6362};
+	          var Queenstown = {-45.0312, 168.6626};
+	          var Dunedin = {-45.8788, 170.5028};
+	          var Rotorua = {-38.1368, 176.2497};
+	          var Auckland = {-36.8485, 174.7633};
 	        });
+	        
+	        var markerHam = new google.maps.Marker({position: Hamilton, map: map});
+	        var markerWel = new google.maps.Marker({position: Wellington, map: map});
+	        var markerChch = new google.maps.Marker({position: Christchurch, map: map});
+	        var markerQtown = new google.maps.Marker({position: Queenstown, map: map});
+	        var markerDun = new google.maps.Marker({position: Dunedin, map: map});
+	        var markerRot = new google.maps.Marker({position: Rotorua, map: map});
+	        var markerAuk = new google.maps.Marker({position: Auckland, map: map});
 	      }
 	    </script>
 	    
 	    <script async defer 
 	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=initMap">
-
-	    <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI46l5ThhLsy8cali5JprGNsn6PPoY_y0&callback=initMap"-->
 	    </script>
    </body>
 
