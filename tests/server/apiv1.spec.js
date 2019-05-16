@@ -29,7 +29,7 @@
 
   describe('Get Weather', function() {
 
-    it('with without city name', function() {
+    it('with without zip code', function() {
       reqMock = {
         query: {
 
@@ -44,7 +44,7 @@
     it('with valid city name and error from request call', function() {
       reqMock = {
         query: {
-          q: 'Hamilton'
+          zip: 3216
         }
       };
 
@@ -60,10 +60,10 @@
       assert(resMock.send.lastCall.calledWith('Failed to get the data'), 'Unexpected response:' + resMock.send.lastCall.args);
     });
 
-    it('with incomplete city name', function() {
+    it('with incomplete zip code', function() {
       reqMock = {
         query: {
-          q: 'Hamilton'
+          zip: 3216
         }
       };
 
@@ -79,10 +79,10 @@
       assert(resMock.send.lastCall.args[0].msg === 'Failed', 'Unexpected response:' + resMock.send.lastCall.args);
     });
 
-    it('with valid city name', function() {
+    it('with valid zip code', function() {
       reqMock = {
         query: {
-          city:
+          zip: 3216
         }
       };
 
@@ -95,7 +95,7 @@
           }
         ],
         main: {
-          temp: 50.61
+          temp: 16
         }
       };
 
@@ -113,7 +113,7 @@
     });
   });
 
-  
+/*  
   describe('Get Weather 2', function() {
 
     it('with without city name', function() {
@@ -198,6 +198,6 @@
       assert(resMock.send.lastCall.args[0].city === 'Hamilton', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are Clouds and temperature is 16 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
-  });
+  });*/
   
 }());
