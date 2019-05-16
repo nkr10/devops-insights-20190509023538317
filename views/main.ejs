@@ -17,7 +17,16 @@
             <% include includes/mainbody %>
         </div>
         
-         <div id="map"></div>
+        
+
+    </body>
+
+    <script>
+         angular.element(document).ready(function() {
+            angular.bootstrap(document, ['ConsoleModule']);
+        });
+    </script>
+     <div id="map"></div>
 	    <script>
 	      var map;
 	      function initMap() {
@@ -30,14 +39,5 @@
 	    
 	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOd05ARvJt0A5QMzaKr21EqIvZdhYABJE&callback=initMap"
 	    async defer></script>
-
-    </body>
-
-    <script>
-         angular.element(document).ready(function() {
-            angular.bootstrap(document, ['ConsoleModule']);
-        });
-    </script>
-    
    
 </html>
