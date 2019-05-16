@@ -39,8 +39,8 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                 if(which === 1) {
                     $scope.zip1City = response.data.city;
                     $scope.zip1Weather = response.data.weather;
-                    $scope.cityLat = response.data.lat;
-                    $scope.cityLng = response.data.lng;
+                    /**$scope.cityLat = response.data.lat;
+                    $scope.cityLng = response.data.lng;**/
                 } else if(which === 2) {
                     $scope.zip2City = response.data.city;
                     $scope.zip2Weather = response.data.weather;
@@ -69,7 +69,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         }
     };
     
-    var markers = [0,0,0,0];
+    /**var markers = [0,0,0,0];
     var markerPos = 1
     
     function displayMarker(){
@@ -79,7 +79,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     		title: index.toString()
     	});
     	
-    }
+    }**/
     
 }
 
