@@ -30,10 +30,11 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
             data = $scope.zip4m;
         } 
 
-        if(data.length === 4) {
+        //if(data.length === 4) {
+        if(data.length !== null) {
             $http({
                 method: "GET",
-                url: '/api/v1/getWeather?zip=' + data
+                url: '/api/v1/getWeather?q=' + data
             }).then( function(response) {
                 if(which === 1) {
                     $scope.zip1City = response.data.city;
