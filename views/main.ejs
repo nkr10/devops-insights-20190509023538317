@@ -27,20 +27,22 @@
     </script>
      
 	    <script>
-	      var map;
+	      
 	      function initMap() {
+	      	  var map;
+	      	  var Hamilton = {lat: -37.7870, lat: 175.2793};
+	          var Wellington = {lat: -41.2865, lat: 174.7762};
+	          var Christchurch = {lat: -43.5321, lat: 172.6362};
+	          var Queenstown = {lat: -45.0312, lat: 168.6626};
+	          var Dunedin = {lat: -45.8788, lat: 170.5028};
+	          var Rotorua = {lat: -38.1368, lat: 176.2497};
+	          var Auckland = {lat: -36.8485, lat: 174.7633};
+	          var NZ = {lat: -40.9006, lat: 174.8860};
 	          map = new google.maps.Map(document.getElementById('map'), {
-	          center: {lat: -37.7833, lng: 175.2793},
-	          zoom: 6;
-	          
-	          var Hamilton = {-37.7870, 175.2793};
-	          var Wellington = {-41.2865, 174.7762};
-	          var Christchurch = {-43.5321, 172.6362};
-	          var Queenstown = {-45.0312, 168.6626};
-	          var Dunedin = {-45.8788, 170.5028};
-	          var Rotorua = {-38.1368, 176.2497};
-	          var Auckland = {-36.8485, 174.7633};
-	        });
+	          center: NZ,
+	          zoom: 6
+	          });
+	        
 	        
 	        var markerHam = new google.maps.Marker({position: Hamilton, map: map});
 	        var markerWel = new google.maps.Marker({position: Wellington, map: map});
